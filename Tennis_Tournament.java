@@ -1,0 +1,12 @@
+public class Tennis_Tournament extends Tournament{
+  private int noOfPlayers;
+  
+  public Tennis_Tournament(String name, int numberofPlayers){
+    super(name);
+    noOfPlayers=numberofPlayers;
+  }
+  public String detail(){
+     return "Tennis Tournament Name: " + getName() + "\n" +
+           "Number of Players: " + noOfPlayers;
+  }
+}

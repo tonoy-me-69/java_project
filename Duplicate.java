@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Duplicate{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Enter a string");
+    String s1=sc.nextLine();
+    int value= s1.length();
+    String output="";
+    int count=0;
+    int codepoint_3=0;
+    
+    
+    for(int i=0; i<value; i++){
+      int codepoint=s1.codePointAt(i);
+      count=0;
+      for(int j=0; j<value; j++){
+      int codepoint_1=s1.codePointAt(j);
+      if(codepoint==codepoint_1){
+        codepoint_3=codepoint;
+        count++;}
+      }
+      if(count==1){
+        output+=(char)codepoint;
+      }
+ 
+      if(count>1){
+        output+=(char)codepoint_3;
+      } 
+    }
+    System.out.print(output);
+  }
+}
+        

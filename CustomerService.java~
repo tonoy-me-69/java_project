@@ -1,0 +1,42 @@
+public class CustomerService{
+  private String [] customer;
+  private int count=0;
+  private int currentcustomer=0;
+  private int index=0;
+  
+  public CustomerService(int a){
+    count=a;
+    customer = new customer [a];
+  }
+  
+  public void serveCustomer(){
+    if(count==0){
+      System.out.println("No customers to serve");
+      return;
+    }
+    else if(currentcustomer>count){
+      System.out.println("No customers to serve");
+      return;
+    }
+    
+    System.out.println("Serving " +customer[currentcustomer]);
+    currentcustomer++
+  }
+  
+  public void addCustomer(String name){
+    if(index<count){
+      history[index]=name;
+    }
+    else{
+      System.out.println("Queue is full. Cannot add " + name);
+    }
+  }
+}
+    
+    
+  
+  
+
+  
+    
+    

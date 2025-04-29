@@ -1,0 +1,44 @@
+public class TaxiLagbe{
+  public String taxi_number;
+  public int total_passenger;
+  public String [] passenger_lists=new String[4];
+  public int total_collected_fare=0;
+  public String city;
+  
+  public void storeInfo(String taxi_number, String city){
+    this.taxi_number=taxi_number;
+    this.city=city;
+  }
+  public void addPassenger(String name, int fare){
+    if(total_passenger>=4){
+      System.out.println("Taxi Full! No more passengers can be added");
+    }
+    else{
+      passenger_lists[total_passenger]=name;
+      total_passenger++;
+      total_collected_fare+=fare;
+      System.out.println("Dear "+name+"! Welcome to TaxiLagbe");
+    }
+  }
+  public void addPassenger(String name, int fare,String name2, int fare2){
+    addPassenger( name,  fare);
+    addPassenger( name2,  fare2);
+  }
+  public void printDetails(){
+    System.out.println("Taxi number: " +taxi_number);
+    System.out.println("This taxi can cover " + city+" area");
+    System.out.println("Total Passenger: " +total_passenger);
+    System.out.println("Passenger Lists: ");
+    for(int i=0; i<total_passenger; i++){
+      System.out.print(passenger_lists[i] + " ");
+    }
+    System.out.println();
+    System.out.println("Total collected fare: " + total_collected_fare + " Taka");
+  }
+}
+                           
+      
+      
+    
+    
+  

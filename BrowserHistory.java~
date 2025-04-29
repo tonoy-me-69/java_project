@@ -1,0 +1,55 @@
+public class BrowserHistory{
+  private String [] history;
+  private int capacity;
+  private int currentIndex=-1;
+  private int count=0;
+  
+  public BrowserHistory(int a){
+    capacity=a;
+    history= new String[a];
+  }
+  
+  public class showHistory(){
+    if(count<==0){
+      System.out.println("No web pages visited yet.");
+      break;
+    }
+    System.out.println("Browser History:");
+    for(i=0; i<count; i++){
+       System.out.println(history[i]);
+    }
+  }
+  
+  public class visitWeb(String b){
+    if(count<capacity){ 
+      history[count]=b;
+      count++;
+      currentIndex++;
+      break;
+    }
+    System.out.println("History is full. Cannot visit");
+    System.out.println(b+"web page");
+  }
+  public class currentWeb{
+    if(currentIndex==-1){
+      System.out.println("You have not visited any website yet!");
+      break;
+    }
+    System.out.println("Current web page:"+history[currentIndex]);
+  }
+}
+    
+  
+    
+    
+  
+  
+      
+    
+      
+  
+    
+  
+  
+  
+  

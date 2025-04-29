@@ -1,0 +1,33 @@
+//Shashoto Devnath
+//TASK10
+import java.util.Scanner;
+public class {
+    public static void main(String[] args) {
+        Scanner nc = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int num = nc.nextInt();
+
+        int temp = num;
+        int count = 0;
+        while (temp != 0) {
+            temp /= 10;
+            count++;
+        }
+
+        int powerOf10 = 1;
+        for (int i = 1; i < count; i++) {
+            powerOf10 *= 10;
+        }
+
+        System.out.print("Individual digits forward: ");
+        while (powerOf10 > 0) {
+            int digit = num / powerOf10;
+            System.out.print(digit);
+            if (powerOf10 >= 10) {
+                System.out.print(", ");
+            }
+            num %= powerOf10;
+            powerOf10 /= 10;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+public class Shape2D{
+  public int length=5;
+  public double area;
+  public int breadth;
+  public int height;
+  public int base;
+  public String shape="Square";
+  
+  
+  public Shape2D(){
+    System.out.println("A Square has been created with length: " + length);
+    area=length*length;
+  }
+  public void area(){
+    System.out.println("The area of the " +shape+" is: "area);
+  }
+  public Shape2D(int length, int breadth){
+    this.length=length;
+    this.breadth=breadth;
+    System.out.printf("A Rectangle has been created with length: %i and breadth: %i\n ", this.length, this.breadth);
+    area=length*breadth;
+    shape="Rectangle"
+  }
+  public Shape2D(int height, int base, String shape){
+    System.out.println("A Triangle has been created with height: " + height+ " and base: " +base);
+    this.shape=shape;
+    area=.5*base*height;
+  }
+  public Shape2D(int a, int b, int c){
+    System.out.printf("A Triangle has been created with the following sides: %i , %i , %i " int a,int b, int c);
+    double s=(a+b+c)/2;
+    area=Math.sqrt(s*(s-a)*(s-b)*(s-c));
+  }
+}
+    
+    
+  
+    
+  
+  
+  
+  
+  

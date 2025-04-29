@@ -1,0 +1,16 @@
+  import java.util.Scanner;
+  public class Task_3{
+    public static void main(String[] args){
+      Scanner SC=new Scanner (System.in);
+      System.out.println("Enter an integer number:");
+      int a=SC.nextInt();
+      if(a%5==0 && a%7==0){
+        System.out.println("Divisible by both 5 and 7");}
+      else if (a%5==0){
+        System.out.println("Invalid: only divisible by 5");}
+     else if (a%7==0){
+       System.out.println("Invalid: only divisible by 7");} 
+       else{
+        System.out.println("NOt divisible by 5 or 7");}
+    }
+  }

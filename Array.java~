@@ -1,0 +1,13 @@
+public class selction_sort{
+  public static void main (String [] args){
+    int [] array= {8,7,9,2,3,1,5,4,6};
+    
+    for(int i: array){
+      System.out.print(i + " ");
+    }
+  }
+}
+    
+    
+    
+      

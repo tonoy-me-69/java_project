@@ -1,0 +1,38 @@
+//import java.util.Scanner;
+public class newTask11{
+  public static void main(String [] args){
+    //Scanner SC=new Scanner(System.in);
+    //System.out.println("Enter the money given by the customer:");
+    //int paid=SC.nextInt();
+  // System.out.println("Enter the amount of money customer needs to pay:");
+   // int cost=SC.nextInt();
+   int paid= 53;
+   int cost= 35;
+    
+    int change=paid-cost;
+    if(change>0){
+      int a=change/100; // 100 tk note
+      int b=change%100; // rest
+      int c=b/10; // 10 tk note 
+      int d=b%10; // rest
+      int e=d/5; // 5 tk note
+      int f=d%5; // rest
+      int g=f/2; // 2 tk note
+      int h=f%2; // rest
+      int j=h/1; //1 tk note
+      
+      
+      
+    System.out.println("The returned amount is " + change + 
+       " and the notes to be given is " + a + " 100 taka notes " + c + " 10 taka notes "
+                         + e +" 5 taka coin " + g + " 2 taka coin " + j + " 1 taka coin" );}
+    
+    else if (change==0){
+      System.out.println("The returned amount is 0 taka " + change);}
+    
+     else if (change<0){
+       int change_1=change*-1;
+      System.out.println("please pay " + change_1+ " taka more");}
+     
+     
+  }}

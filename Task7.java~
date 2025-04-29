@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+//Task 7A
+
+public class Task7{
+  public static void oneToN( int a, int b){
+    for(int i=a; i<=b; i++){
+      System.out.print(i+" ");
+    }
+  }
+  
+  //Task 7B
+  
+  public static void nToOne( int a, int b){
+    for(int i=b; i>=a; i--){
+      System.out.print(i+" ");
+    }
+  }
+  
+  //Task 7C
+  
+  public static void recursiveSum( int a, int b){
+    int sum=0;
+    for(int i=b; i>=a; i--){
+      sum+=i;    
+    }
+    System.out.println("Recursive sum = " +sum);
+  }
+  
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println(" Enter the value of N");
+    int N=sc.nextInt();
+    oneToN(1,N);
+    System.out.println();
+    nToOne(1,N);
+    System.out.println();
+    recursiveSum(1,N);
+  }
+}

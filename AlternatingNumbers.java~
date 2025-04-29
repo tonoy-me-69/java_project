@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class AlternatingNumbers    {
+  public static void main(String [] args){
+    Scanner SC=new Scanner(System.in);
+    System.out.println("Enter an integer number:");
+    int input_number=SC.nextInt();
+    int output=0;
+    int number=1;
+    if(input_number>0){
+        if(input_number%2!=0){
+           while(number<=input_number){
+             System.out.print( number + " ," );
+             number +=2;}}}
+     else if (input_number%2==0){
+            while(number<=input_number){
+             System.out.print( number + " ," );
+             number +=2;}}
+     else{
+      System.out.print("Input is invalid");}}}

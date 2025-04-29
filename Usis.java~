@@ -1,0 +1,63 @@
+public class Usis{
+  public int totalAdvisee=5;
+  public []String Student= new String [5];
+    
+  public Usis(){
+  System.out.println(" Usis is ready to use!");
+  }
+  
+  public void login(String name){
+    if(email.equals(null) || password ==0){
+      System.out.println("Email and password need to be set.");
+    }
+    else{
+      System.out.println("Login successful");
+    }
+  }
+  
+  public void advising(String name){
+    if(email.equals(null) || password ==0){
+      System.out.println("Please login to advise courses");
+    }
+    else{
+      System.out.println("You haven't selected any courses.");
+    }
+  }
+  public void advising(String name, String courses1, String courses2, String courses3, String courses4){
+    System.out.println("You need special approval to take more than 3 courses.");
+  }
+  
+  public void advising(String name, String courses1, String courses2, String courses3){
+    System.out.println("Advising successful!");
+    courses[0]= courses1;
+    courses[1]=courses2;
+    courses[2]=courses3;
+    Student[advisee]=name;
+    advisee++;
+    
+  }
+  
+  public void allAdviseeInfo(){
+     System.out.println("Total Advisee: " +advisee);
+     
+     for(int i=0; i<advisee; i++){
+       System.out.print("Name: " + Student[i]+"  ");
+       System.out.print("ID: " + id);
+       System.out.println();
+       System.out.println("Department: " + department);
+       System.out.println("Advised Courses:");
+       for(int j=0; j<3 ; j++){
+         System.out.print(Student[i].courses[j]);
+       }
+     }
+  }
+}
+       
+  
+  
+  
+  
+  
+      
+    
+  

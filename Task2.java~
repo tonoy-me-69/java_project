@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Task2{
+  public static void main(String [] args){
+    int count=0;
+    
+    System.out.println("Input the starting value");
+    Scanner sc=new Scanner(System.in);
+    int start=sc.nextInt();
+    System.out.println("Input the Ending value");
+    //Scanner sc=new Scanner(System.in);
+    int end=sc.nextInt();
+    
+    System.out.println("Prime number between " + start+" and " +end);
+    
+    for(int i= start; start<=end; i++){
+      for(int j=1; j<=i ; j++){
+        int divisible= i%j;
+        if(divisible==0){
+          count++;
+        }
+      }
+      if(count==2){
+        System.out.print(i+" ");
+      }
+    }
+  }
+}
+      
+      
+    

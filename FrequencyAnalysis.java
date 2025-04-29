@@ -1,0 +1,34 @@
+public class FrequencyAnalysis {
+    public static void main(String[] args) {
+        int[] data = {55, 72, 68, 50, 85, 90, 74, 60, 58, 77, 82, 65, 71, 53, 69, 88, 59, 76, 64, 66, 80, 79, 57, 54, 81, 87, 75, 61, 56, 78};
+        
+        // Define class ranges
+        int[][] ranges = {
+            {50, 57}, {58, 65}, {66, 73}, {74, 81}, {82, 89}, {90, 97}
+        };
+        
+        int[] frequencies = new int[ranges.length];
+        
+        // Calculate frequency
+        for (int num : data) {
+            for (int i = 0; i < ranges.length; i++) {
+                if (num >= ranges[i][0] && num <= ranges[i][1]) {
+                    frequencies[i]++;
+                    break;
+                }
+            }
+        }
+        
+        // Calculate cumulative frequency, percentage, and relative frequency
+        int cumulativeFrequency = 0;
+        System.out.println("Class Range | Frequency | Cumulative Frequency | Percentage | Relative Frequency");
+        for (int i = 0; i < ranges.length; i++) {
+            cumulativeFrequency += frequencies[i];
+            double percentage = (frequencies[i] / 30.0) * 100;
+            double relativeFrequency = frequencies[i] / 30.0;
+            System.out.printf("%2d - %2d   | %5d     | %10d            | %.2f%%       | %.4f\n",
+                              ranges[i][0], ranges[i][1], frequencies[i], cumulativeFrequency, percentage, relativeFrequency);
+        }
+    }
+}
+

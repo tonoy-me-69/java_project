@@ -1,0 +1,31 @@
+ //import java.util.Scanner;
+  public class Task_4{
+    public static void main(String[] args){
+     // Scanner SC=new Scanner (System.in);
+     // System.out.println("Enter a year:");
+     // int a=SC.nextInt();
+      int a=2020;
+      if(a%4==0 && a%100!=0){
+        System.out.println("This is a leap year " + a);}
+      else if (a%400==0){
+        System.out.println("This is a leap year " + a);}
+      else{
+        System.out.println("This is not a leap year " + a);}
+      
+      int b=2001;
+      if(b%4==0 && b%100!=0){
+        System.out.println("This is a leap year " + b);}
+      else if (b%400==0){
+        System.out.println("This is a leap year " + b);}
+      else{
+        System.out.println("This is not a leap year " + b);}
+      
+      int c=1900;
+      if(c%4==0 && c%100!=0){
+        System.out.println("This is a leap year " + c);}
+      else if (c%400==0){
+        System.out.println("This is a leap year " + c);}
+      else{
+        System.out.println("This is not a leap year " + c);}
+    }
+  }

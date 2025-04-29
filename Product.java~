@@ -1,0 +1,43 @@
+public class Product{
+  public String name="unknown";
+  public double price=0.0;
+  public int quantity=0;
+  
+  public Product(){
+    this.name=name;
+    this.price=price;
+    this.quantity=quantity;
+  }
+  
+  public Product(String name, double price){
+    this.name=name;
+    this.price=price;
+  }
+  public void setQuantity(int quantity){
+    this.quantity=quantity;
+  }
+  public void displayInfo(boolean a){
+    System.out.println("Product Name:" + name);
+    System.out.println("Price:$"+price);
+    System.out.println("Quantity:"+quantity);
+  }
+  
+  public void displayInfo(){
+    System.out.println("Product Name:" + name);
+    System.out.println("Price:$"+price);
+    //if(quantity>0){
+      //System.out.println("Quantity:"+quantity);
+    //}
+  }
+  public double getPrice(){
+    return price;
+  }
+  public int getQuantity(){
+    return quantity;
+  }
+}
+  
+    
+    
+  
+  

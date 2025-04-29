@@ -1,0 +1,24 @@
+public class Shape{
+  public String shape_Name="";
+  public double area=0;
+  
+  public void setParameters(String shape_Name, int radius){
+    this.shape_Name=shape_Name;
+    area=Math.PI*radius*radius;
+  }
+  public void setParameters(String shape_Name, int length, int base){
+    this.shape_Name=shape_Name;
+    area=.5*length*base;
+  }
+  public void setParameters(String shape_Name, double length, double base){
+    this.shape_Name=shape_Name;
+    area=length*base;
+  }
+  public String details(){
+    return "Shape Name: " + shape_Name + "\nArea: " + area;
+  }
+}
+    
+  
+  
+  

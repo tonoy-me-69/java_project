@@ -1,0 +1,75 @@
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PiePlot;
+import org.jfree.data.general.DefaultPieDataset;
+import javax.swing.*;
+
+public class PieChartExample {
+    public static void main(String[] args) {
+        // Sample array of 30 integer values
+        int[] numbers = {55, 72, 68, 50, 85, 90, 74, 60, 58, 77, 82, 65, 71, 53, 69, 88, 59, 76, 64, 66, 80, 79, 57, 54, 81, 87, 75, 61, 56, 78};
+
+        // Define the ranges
+        int[] range1 = {50, 57}; // 50 to 57
+        int[] range2 = {58, 65}; // 58 to 65
+        int[] range3 = {66, 73}; // 66 to 73
+        int[] range4 = {74, 81}; // 74 to 81
+        int[] range5 = {82, 89}; // 82 to 89
+        int[] range6 = {90, 97}; // 90 to 97
+
+        // Initialize counters for each range
+        int count1 = 0, count2 = 0, count3 = 0, count4 = 0, count5 = 0, count6 = 0;
+
+        // Count the number of elements in each range
+        for (int num : numbers) {
+            if (num >= range1[0] && num <= range1[1]) count1++;
+            if (num >= range2[0] && num <= range2[1]) count2++;
+            if (num >= range3[0] && num <= range3[1]) count3++;
+            if (num >= range4[0] && num <= range4[1]) count4++;
+            if (num >= range5[0] && num <= range5[1]) count5++;
+            if (num >= range6[0] && num <= range6[1]) count6++;
+        }
+
+        // Create a dataset for the pie chart
+        DefaultPieDataset dataset = new DefaultPieDataset();
+        dataset.setValue("50-57", count1);
+        dataset.setValue("58-65", count2);
+        dataset.setValue("66-73", count3);
+        dataset.setValue("74-81", count4);
+        dataset.setValue("82-89", count5);
+        dataset.setValue("90-97", count6);
+
+        // Create the pie chart
+        JFreeChart chart = ChartFactory.createPieChart(
+                "Number Distribution",  // Title
+                dataset,                // Dataset
+                true,                   // Include legend
+                true,                   // Tooltips
+                false                   // URLs
+        );
+
+        // Customize the pie chart
+        PiePlot plot = (PiePlot) chart.getPlot();
+        plot.setSectionDepth(0.2); // Make the pie chart look 3D
+
+        // Display the chart in a JFrame
+        JFrame frame = new JFrame("Pie Chart Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(800, 600);
+        frame.add(new ChartPanel(chart));
+        frame.setVisible(true);
+
+        // Calculate total count
+        int total = count1 + count2 + count3 + count4 + count5 + count6;
+
+        // Print the percentages
+        System.out.println("Percentage of numbers in each range:");
+        System.out.println("50-57: " + ((double) count1 / total) * 100 + "%");
+        System.out.println("58-65: " + ((double) count2 / total) * 100 + "%");
+        System.out.println("66-73: " + ((double) count3 / total) * 100 + "%");
+        System.out.println("74-81: " + ((double) count4 / total) * 100 + "%");
+        System.out.println("82-89: " + ((double) count5 / total) * 100 + "%");
+        System.out.println("90-97: " + ((double) count6 / total) * 100 + "%");
+    }
+}

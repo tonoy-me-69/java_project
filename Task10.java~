@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Task10 {
+    public static void main(String[] args) {
+        int[] marks = {100, 47, 85, 94, 5, 50};
+
+        int size=marks.length;
+        String [] names =  {"Henry", "Mari", "Herry", "Jack", "Lily", "Oliver"};
+        for(int i=0; i<size-1 ; i++){
+          for(int j=0 ; j<size-i-1; j++){
+            
+            //For marks
+            
+            if(marks[j]>marks[j+1]){
+              int currentMark=marks[j];
+              marks[j]=marks[j+1];
+              marks[j+1]=currentMark;
+              
+              //For names
+              
+              String currentName = names[j];
+                    names[j] = names[j + 1];
+                    names[j + 1] = currentName;
+              
+              
+            }
+          }
+        }
+        System.out.println("Sorted Array:");
+        for (int i = 0; i < size; i++) {
+            System.out.print(marks[i] + " ");
+        }
+        System.out.println();
+        for (int i = 0; i < size; i++) {
+            System.out.print(names[i] + " ");
+        }
+    }
+}
+
+        
+
+
+      

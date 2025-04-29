@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+        int sum = 0;
+        int i = 1;
+        
+        // Use a while loop to iterate through numbers from 1 to 600
+        while (i <= 600) {
+            // Check if the number is a multiple of both 7 and 9
+            if (i % 7 == 0 && i % 9 == 0) {
+                sum += i;
+            }
+            i++;
+        }
+        
+        // Print the result
+        System.out.println("The sum of all numbers that are multiples of both 7 and 9 up to 600 is: " + sum);
+    }
+}

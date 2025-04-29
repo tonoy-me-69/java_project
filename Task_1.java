@@ -1,0 +1,26 @@
+//Task 1 of Assignment 2
+public class Task_1{
+  public static void main (String [] args){
+    int a= 100;
+      int b=23;
+      int c=-4;
+      if (a>b && a>c){
+        System.out.println("The largest number is:" +a);}
+      else if (b>a && b>c){
+        System.out.println("The largest number is:" +b);}
+      else {
+        System.out.println("The largest number is:" +c);}
+      
+       int d= 5;
+      int e=17;
+      int f=-5;
+      if (d>e && d>f){
+        System.out.println("The largest number is:" +d);}
+      else if (e>d && e>f){
+        System.out.println("The largest number is:" +e);}
+      else {
+        System.out.println("The largest number is:" +f);}
+      
+       
+  }
+}

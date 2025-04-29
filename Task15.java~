@@ -1,0 +1,13 @@
+public class Task15 {
+  public static void main (String [] args){
+    double summation = 0;
+    int numbers = 200;
+    // For e shob bhirtore hoy
+    // i ekti int, likha lgbe
+    for(int i=1; i<=200 ; i++){
+      summation = summation + i;}
+    double average =   summation / numbers ;
+    System.out.println(" The summation is " + summation);
+    System.out.println(" The average is " + average);}
+}
+      

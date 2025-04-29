@@ -1,0 +1,17 @@
+public class Task8{
+  public static void reverseDigit(int n){
+    boolean flag=true;
+    while(flag){
+    int output=n%10;
+    n=n/10;
+    if(n==0){
+      //output=n/10;
+      flag=!true;
+    }
+    System.out.println(output);
+  }
+  }
+  public static void main(String [] args){
+    reverseDigit(649);
+  }
+}

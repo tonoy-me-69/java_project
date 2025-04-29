@@ -1,0 +1,18 @@
+public class Circle{
+  public static int count=0;
+  
+  private double radius;
+  private double area;
+  
+  public Circle(double radius){
+    this.radius=radius;
+    count++;
+  }
+  public double getRadius(){
+    return radius;
+  }
+  public double area(){
+    return Math.PI*radius*radius;
+  }
+}
+  

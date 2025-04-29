@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class Task4{
+  
+  //Task 4A
+  
+  public static boolean isPrime(int a){
+    int divisible=0;
+    for(int i=1; i<=a; i++){
+      if(a%i==0){
+        divisible++;
+      }
+    }
+    if(divisible==2){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+  
+  // Task 4B
+  
+  public static boolean isPerfect(int a){
+    int sum=0;
+    for(int i=1; i<=a; i++){
+      if(a%i==0){
+        sum+=i;
+      }
+    }
+    return(sum==2*a);
+  }
+  
+  //Task 4C
+  
+  public static int special_sum(int a){
+    int sum=0;
+    for(int i=1; i<=a ; i++){
+      if (isPrime(i) || isPerfect(i)) {
+        sum+=i;
+      }
+    }
+    return sum;
+  }
+    
+    public static void main(String [] args){
+      boolean check = isPrime(1);
+      System.out.println(check);
+      System.out.println(isPerfect(1));
+      Scanner sc=new Scanner(System.in);
+      System.out.println(" Enter an integer number");
+      int number=sc.nextInt();
+      System.out.println(special_sum(number));
+      
+    }
+  }
+
+      

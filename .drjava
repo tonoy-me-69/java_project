@@ -1,0 +1,23 @@
+#DrJava configuration file
+#Wed Apr 30 00:51:43 BDT 2025
+font.main = Monospaced-BOLD-20
+font.line.numbers = Monospaced-BOLD-20
+font.doclist = Monospaced-BOLD-20
+font.toolbar = -BOLD-14
+lineenum.enabled = true
+key.delete.next = [shift DELETE]
+key.delete.previous = [shift BACK_SPACE]
+quit.prompt = false
+save.before.compile = true
+recent.files = [C:\\Users\\LENOVO\\CD.java,C:\\Users\\LENOVO\\Tester6.java,C:\\Users\\LENOVO\\Book.java,C:\\Users\\LENOVO\\BookTester.java,C:\\Users\\LENOVO\\Player.java]
+window.height = 1038
+window.width = 1938
+window.x = -9
+window.y = -9
+window.state = 6
+doc.list.width = 152
+last.dir = C:\\Users\\LENOVO
+last.interactions.dir = C:\\Users\\LENOVO
+tabbedpanes.state = 960 540 700 400
+new.version.notification.last = 1745952694851
+file.ext.registration = always

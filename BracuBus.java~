@@ -1,0 +1,65 @@
+public class BracuBus{
+  String location;
+  int passengerCount=0;
+  int maxCount=0;
+  BracuStudent[] passengerList;
+  
+  public BracuBus(String location){
+    this.location=location;
+    this.maxCount=2;
+    passengerList = new BracuStudent[maxCount];
+  }
+  public BracuBus(String location, int maxCount){
+    this.maxCount=maxCount;
+    this.location=location;
+    passengerList = new BracuStudent[this.maxCount];
+  }
+  public void showDetails() {
+    System.out.println("Bus Route: " + location);
+    System.out.println("Passenger Count: " + passengerCount + " (Max: " + maxCount + ")");
+    System.out.print("Passenger on Board: ");
+    for(int i=0; i<passengerCount; i++){
+      System.out.print(passengerList[i].name + " ");
+    }
+    System.out.println();
+  }
+  
+  public void board(){
+    System.out.println("No passengers");
+  }
+  
+  public void board()(BracuStudent s1){
+    if(s1.busPass==false){
+      System.out.println("You don't have a bus pass!");
+      return;
+    }
+    
+    if (!s1.address.equals(location)){
+      System.out.println("You got on the wrong bus!");
+      return;
+    }
+    if(passengerCount>= maxCount){
+      System.out.println("Bus is full");
+      return;
+    }
+    
+    passengerList[passengerCount]= s1;
+    passengerCount++;
+    System.out.println(s1.name + " boarded the bus.");
+  }
+  
+   public void board(BracuStudent s1, BracuStudent s2) {
+    board(s1);
+    if (passengerCount < maxCount) {
+      board(s2);
+    }
+  }
+}
+  
+  
+    
+    
+    
+  
+  
+  

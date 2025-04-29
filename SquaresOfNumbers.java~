@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class SquaresOfNumbers{
+  public static void main(String [] args){
+    Scanner SC=new Scanner(System.in);
+    System.out.println("Enter an integer number:");
+    int a=SC.nextInt();
+    int i==a;
+    int value=0;
+    if (a>0){
+      while(i>0){
+      value=i*i;
+      i--;
+      System.out.println(value + " ,")}}}}
+      
+      

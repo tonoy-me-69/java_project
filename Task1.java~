@@ -1,0 +1,67 @@
+import java.util.Scanner;
+public class Task1{
+  
+  // Task 1A
+  
+  public static String evenchecker(int a){
+    if(a%2==0){
+      return " Even ";
+    }
+    else{
+      return " Odd ";     
+    }
+  }
+  
+  //Task 1B
+  
+  public static boolean isEven(int a){
+  boolean isEven=true;
+  if(a%2==0){
+    return isEven;
+  }
+  else{
+    return !isEven;
+  }
+}  
+  //Task 1C
+  
+public static boolean isPositive(int a){
+  if(a>0){
+    return true;
+  }
+   return false;
+}
+
+// Task 1D
+
+public static void sequence(int number){
+  
+        if(isPositive(number)){
+            for (int i =0; i<= number; i+= 2) {
+                System.out.print(i + " ");
+            }
+        }
+        else{
+            if(isEven(number)){
+                for (int i= number + 1; i< 0; i+= 2) {
+                    System.out.print(i+ " ");
+                }
+            }
+            else {
+                for (int i= number; i< 0; i+= 2) {
+                    System.out.print(i + " ");
+                }
+            }
+        }
+}
+public static void main( String [] args){
+  Scanner sc=new Scanner ( System.in);
+  System.out.print("Enter an integer: ");
+  int number=sc.nextInt();
+  System.out.println(isEven(number));
+  System.out.println(evenchecker(number));
+  System.out.println(isPositive(number));
+  sequence(number);
+}
+}
+  

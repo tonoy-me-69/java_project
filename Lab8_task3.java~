@@ -1,0 +1,55 @@
+public class Lab8_task3{
+  public static void main(String [] args){
+   String [] email_list = {"abc@gmail.com", "!@cv.bd",  "123cse@bracu.ac.bd"};
+   
+   int count=0;
+   
+   for(int i=0; i<email_list.length; i++){
+     boolean condition= false;
+     String check= email_list[i];
+     //int number=check.codepointAt[0];
+     if((check.codepointAt[0]>=65 && check.codepointAt[0]<=90) ||(check.codepointAt[0]>=97 && check.codepointAt[0]<=122)){
+       int number=0;
+       int number2=0;
+       for(int j=1; j<check.length ; j++){
+         if(check.charAt[j]=="@"){
+           number=j;
+         }
+       }
+       if(number>0){
+         for(int k=number+1; k<check.length ; k++){
+           if(check.charAt[k]=="."){
+             number2=k;
+           }
+         }
+       }
+       if(number2>0){
+         for(int l=number2+1; l<check.length ; ++){
+           if((check.codepointAt[l]>=65 && check.codepointAt[l]<=90) ||(check.codepointAt[l]>=97 && check.codepointAt[l]<=122)){
+             condition=true;
+           }
+         }
+       }
+     }
+     if(condition==true){
+       count ++;
+     }
+   }
+   System.out.println(count);
+  }
+}
+         
+       
+             
+       
+             
+             
+           
+           
+         
+       
+       
+           
+       
+     
+   

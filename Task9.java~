@@ -1,0 +1,31 @@
+public class Task9{
+  public static void sumDigit(int n){
+    int sum=0;
+    
+    //infinite loop
+    
+    while(true){
+      
+      //last digit
+      
+    int output=n%10;
+    
+    //remove last digit
+    
+    
+    n=n/10;
+    
+    //sum
+    
+    sum+=output;
+    if(n==0){
+      
+      break;
+    }
+  }
+    System.out.println(sum);
+  }
+  public static void main(String [] args){
+    sumDigit(12345);
+  }
+}

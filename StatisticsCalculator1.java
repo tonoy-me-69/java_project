@@ -1,0 +1,73 @@
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
+
+public class StatisticsCalculator1 {
+    public static void main(String[] args) {
+        // Sample array of raw data
+        int[] data = {55, 72, 68, 50, 85, 90, 74, 60, 58, 77, 82, 65, 71, 53, 69, 88, 59, 76, 64, 66, 80, 79, 57, 54, 81, 87, 75, 61, 56, 78};
+
+        // Sort the data from smallest to largest
+        Arrays.sort(data);
+        System.out.println("Sorted Data: " + Arrays.toString(data));
+
+        // Calculate and print the mean, median, and mode
+        double mean = calculateMean(data);
+        System.out.println("Mean: " + mean);
+
+        double median = calculateMedian(data);
+        System.out.println("Median: " + median);
+
+        List<Integer> mode = calculateMode(data);
+        System.out.println("Mode: " + mode);
+    }
+
+    // Method to calculate the mean
+    public static double calculateMean(int[] data) {
+        int sum = 0;
+        for (int num : data) {
+            sum += num;
+        }
+        return (double) sum / data.length;
+    }
+
+    // Method to calculate the median
+    public static double calculateMedian(int[] data) {
+        int n = data.length;
+        if (n % 2 == 0) {
+            // If even number of elements, median is the average of the two middle elements
+            return (data[n / 2 - 1] + data[n / 2]) / 2.0;
+        } else {
+            // If odd number of elements, median is the middle element
+            return data[n / 2];
+        }
+    }
+
+    // Method to calculate the mode
+    public static List<Integer> calculateMode(int[] data) {
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+        
+        // Count the frequency of each element in the data
+        for (int num : data) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+
+        // Find the maximum frequency
+        int maxFrequency = 0;
+        for (int frequency : frequencyMap.values()) {
+            maxFrequency = Math.max(maxFrequency, frequency);
+        }
+
+        // Find all numbers that have the maximum frequency (mode)
+        List<Integer> modes = new ArrayList<>();
+        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+            if (entry.getValue() == maxFrequency) {
+                modes.add(entry.getKey());
+            }
+        }
+
+        return modes;
+    }
+}

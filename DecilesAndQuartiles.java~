@@ -1,0 +1,43 @@
+import java.util.Arrays;
+
+public class DecilesAndQuartiles {
+    public static void main(String[] args) {
+        // Sample array of 30 integer values representing weights
+        int[] data = {
+            52, 55, 61, 67, 80, 72, 56, 59, 85, 92, 
+            48, 53, 66, 77, 78, 83, 90, 94, 56, 50, 
+            63, 69, 75, 88, 89, 64, 71, 57, 95, 98
+        };
+
+        // Sort the data array in ascending order
+        Arrays.sort(data);
+        System.out.println("Sorted Data: " + Arrays.toString(data));
+
+        // Calculate and print deciles and quartiles
+        System.out.println("\nDeciles:");
+        for (int i = 1; i <= 9; i++) {
+            System.out.println("D" + i + ": " + calculatePercentile(data, i * 10));
+        }
+
+        System.out.println("\nQuartiles:");
+        System.out.println("Q1: " + calculatePercentile(data, 25));  // 25th percentile
+        System.out.println("Q2 (Median): " + calculatePercentile(data, 50));  // 50th percentile
+        System.out.println("Q3: " + calculatePercentile(data, 75));  // 75th percentile
+    }
+
+    // Method to calculate the nth percentile (e.g., 10th, 25th, 50th, etc.)
+    public static double calculatePercentile(int[] data, int percentile) {
+        int n = data.length;
+        double index = (percentile / 100.0) * (n - 1);
+        int lowerIndex = (int) Math.floor(index);
+        int upperIndex = (int) Math.ceil(index);
+
+        // If both indices are the same, return the value at that index
+        if (lowerIndex == upperIndex) {
+            return data[lowerIndex];
+        } else {
+            // Interpolate between the two values
+            return data[lowerIndex] + (index - lowerIndex) * (data[upperIndex] - data[lowerIndex]);
+        }
+    }
+}

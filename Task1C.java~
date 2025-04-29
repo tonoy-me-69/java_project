@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Task1C{
+public static boolean isPositive(int a){
+  if(a>0){
+    return true;
+  }
+}
+public static void main(String [] args){
+  Scanner sc= new Scanner(System.in);
+  System.out.Println(" Enter an integer number ");
+  int value=sc. nextInt();
+  System.out.println(isPositive(value));
+}
+}
+  

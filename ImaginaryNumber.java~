@@ -1,0 +1,10 @@
+public class ImaginaryNumber{
+  public String realPart="0";
+  public String imaginaryPart="0";
+  
+  public void printNumber{
+    System.out.println(realPart+ " + " + imaginaryPart +"i");
+  }
+}
+    
+  

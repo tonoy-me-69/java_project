@@ -1,0 +1,24 @@
+public class BracuStudent{
+  Stirng name;
+  String location;
+  boolean busPass=false;
+  
+  public BracuStudent(String name, String location){
+    this.name=name;
+    this.location=location;
+  }
+  public void showDetails(){
+    System.out.println("Student Name: " + name);
+    System.out.println("Lives in " + location);
+    System.out.println("Have Bus pass? " + busPass);
+  }
+  
+  public void getPass(){
+    busPass=true;
+  }
+  public void updatehome(String newAddress){
+    location= newAddress;
+  }
+}
+  
+    

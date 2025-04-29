@@ -1,0 +1,13 @@
+public class Recurtion{
+  public static int print_reverse(int a){
+    if(a==1){
+      return 1;
+    }
+    else{
+      return a - print_reverse (a-1);
+    }
+  }
+  public static void main(String [] args){
+    System.out.println(print_reverse (9));
+  }
+    

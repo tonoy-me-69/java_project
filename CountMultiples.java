@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class CountMultiples  {
+  public static void main(String [] args){
+    Scanner SC=new Scanner(System.in);
+    System.out.println("Enter an integer number to be divided:");
+    int n=SC.nextInt();
+    System.out.println("Enter the number to divide with:");
+    int k=SC.nextInt();
+    int i=0;
+    int total=0;
+    int b=0;
+    if(n>0){
+      while(i<=n){
+        b=i/k;
+        i++;
+        if(i%k==0){
+          total ++;}}
+    System.out.print(total);}
+    else{
+      System.out.print("Enter a valid number");}}}

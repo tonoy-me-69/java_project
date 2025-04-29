@@ -1,0 +1,42 @@
+public class Playlist{
+  String playList_name;
+  Song start;
+  
+  public Playlist(String playList_name){
+    this.playList_name=playList_name;
+    this.start=null;
+    System.out.println(playList_name + " created");
+  }
+  public void info(){
+    System.out.println(playList_name +" has the following songs:");
+    if(start == null){
+      System.out.println("No songs in " + playList_name + ".");
+      return;
+    }
+    else{
+      Song current= start;
+      
+      while(current!=null){
+        current.songInfo();
+        current= current.next;
+      }
+    }
+      
+  }
+  
+  public void addSong( Song s){
+    if(start== null){
+      start=s;
+    }
+    else{
+      Song current= start;
+      while(current.next !=null){
+        current= current.next;
+      }
+      current.next=s;
+    }
+    System.out.println(s.title + " added to " + playList_name + ".");
+  }
+    
+}
+  

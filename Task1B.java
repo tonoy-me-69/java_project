@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Task1B{
+public static boolean isEven(int a){
+  boolean isEven=true;
+  if(a%2==0){
+    return isEven;
+  }
+  else{
+    return !isEven;
+  }
+}
+public static void main( String [] args){
+  Scanner sc=new Scanner ( System.in);
+  System.out.print("Enter an integer: ");
+  int number=sc.nextInt();
+  System.out.println(isEven(number));
+}
+}
+  
+  
+    
